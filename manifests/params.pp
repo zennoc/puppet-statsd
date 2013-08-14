@@ -16,11 +16,8 @@ class statsd::params($node_module_dir  = '') {
           'apt': {
             $statsjs = '/usr/share/statsd/stats.js'
           }
-          'npm': {
-            $statsjs = '/usr/lib/node_modules/statsd/stats.js'
-          }
           default: {
-            fail('Unsupported provider')
+            $statsjs = '/usr/lib/node_modules/statsd/stats.js'
           }
         }
       } 
